@@ -1,0 +1,7 @@
+x64/
+Paradise
+*.vcxproj.user
+.vs
+Release
+Debug
+packages

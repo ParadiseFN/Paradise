@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="Paradise.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Paradise"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Paradise Launcher">
+    <Window.SystemBackdrop>
+        <MicaBackdrop Kind="BaseAlt"/>
+    </Window.SystemBackdrop>
+    <Grid>
+        <Grid x:Name="AppTitleBar"  
+          Height="32" VerticalAlignment="Top">
+            <!--PointerMoved="PM" PointerPressed="PP" PointerExited="PE"-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Name="LeftPaddingColumn" Width="0"/>
+                <ColumnDefinition/>
+                <ColumnDefinition x:Name="RightPaddingColumn" Width="0"/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="TitleBarIcon" Source="/Assets/Condo.png"
+               Grid.Column="1"
+               HorizontalAlignment="Left"
+               Width="30" Height="24"
+               Margin="4,0,0,0"/>
+            <TextBlock x:Name="TitleBarTextBlock" 
+                   Text="Paradise"
+                   Style="{StaticResource CaptionTextBlockStyle}"
+                   Grid.Column="1"
+                   VerticalAlignment="Center"
+                   Margin="40,0,0,0"/>
+        </Grid>
+        <Grid>
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-152.5,0,0">
+                <TextBox HorizontalAlignment="Center" PlaceholderText="Backend..." x:Name="a" Width="500" Height="35" Margin="0,0,0,0"></TextBox>
+                <TextBox HorizontalAlignment="Center" PlaceholderText="Email..." x:Name="b" Width="500" Grid.Row="2" Height="35" Margin="0,90,0,0"></TextBox>
+                <PasswordBox HorizontalAlignment="Center" PlaceholderText="Password..." x:Name="c" Width="500" Grid.Row="4" Height="35" Margin="0,180,0,0"></PasswordBox>
+                <Button HorizontalAlignment="Center" Content="Launch" x:Name="LOL" Click="Launch"  Grid.Row="6" Margin="0,270,0,0"></Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
